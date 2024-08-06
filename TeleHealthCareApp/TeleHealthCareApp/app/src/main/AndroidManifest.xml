@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tele_healthcareapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logoooo_round"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logoooo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TeleHealthCareApp"
+        android:usesCleartextTraffic="true">
+
+
+        <activity
+            android:name=".ChatActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Report"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Appointment"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".VideoCallActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Dashboard"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Create_Account"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Profile"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Upload_Video"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Sign_In"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".Notification">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Notification_Response" />
+    </application>
+
+</manifest>
